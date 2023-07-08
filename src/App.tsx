@@ -182,7 +182,7 @@ export default function App() {
     <>
       <Header />
 
-      <main className="overflow-hidden">
+      <main className="overflow-hidden container mx-auto">
         <nav>
           <ul className="sm:flex w-full my-5 cursor-pointer text-white text-3xl gap-4 font-medium">
             <li
