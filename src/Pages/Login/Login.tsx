@@ -61,12 +61,13 @@ export const Login = () => {
           </Link>
 
           <p className="my-2">Ainda não tem uma conta?</p>
-          <a
-            href="./src/pages/register.html"
+          <Link 
+            to={'/sign-in'}
+            
             className="p-2 bg-transparent text-center text-white border-2 text-2xl font-bold rounded-3xl w-60"
           >
             Cadastrar
-          </a>
+          </Link>
         </section>
       </main>
     </>

@@ -1,6 +1,11 @@
+import { Link } from "react-router-dom";
+import { Header } from "../../components/Header/Header";
+
 export const SignIn = () => {
   return (
-    <main className="overflow-hidden flex justify-center">
+      <>
+        <Header/>
+        <main className="overflow-hidden flex justify-center">
       <section
         id="login"
         className="bg-secondary flex flex-col items-center text-white px-2 lg:px-36 py-10 rounded-xl m-3 lg:mx-0 w-full lg:w-4/12"
@@ -54,20 +59,21 @@ export const SignIn = () => {
           />
         </div>
 
-        <a
+        <Link
           className="p-2 bg-white mt-16 text-secondary text-center text-2xl font-bold rounded-3xl w-60"
-          href="../pages/home.html"
+          to={'/home'}
         >
           Criar Conta
-        </a>
+        </Link>
         <p className="my-2">Já possui conta?</p>
-        <a
-          href="../../index.html"
+        <Link
+          to={'/'}
           className="p-2 bg-transparent text-center text-white border-2 text-2xl font-bold rounded-3xl w-60"
         >
           Entrar
-        </a>
+          </Link>
       </section>
     </main>
+      </>
   );
 };

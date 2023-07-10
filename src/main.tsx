@@ -5,6 +5,8 @@ import "./index.css";
 import { Login } from "./Pages/Login/Login";
 import App from "./App";
 import ApexChart from "./Pages/Chart/Chart";
+import { Footer } from "./components/Footer/Footer";
+import { SignIn } from "./Pages/SignIn/SignIn";
 
 const router = createBrowserRouter([
   {
@@ -12,7 +14,8 @@ const router = createBrowserRouter([
     element: <Login />,
   },
   {
-    path: "register",
+    path: "sign-in",
+    element:<SignIn/>
   },
   {
     path: "home",
@@ -27,5 +30,6 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <RouterProvider router={router} />
+    <Footer/>
   </React.StrictMode>
 );
