@@ -1,4 +1,5 @@
 import { FaArrowDown, FaArrowUp } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 interface Idata {
     name:string,
@@ -22,7 +23,7 @@ export const Card  = (props:Idata) => {
               <div className="title-card text-2xl font-medium">{props.name}</div>
               <span className="text-zinc-400 font-bold">{props.ticker}</span>
             </div>
-            <a href="../../src/pages/chart.html">
+              <Link to={`/chart/${props.name}/${props.price.replace('.', ',')}/${props.percentage_change}/${props.ticker}/${props.currency}/${props.value}`}>
               <div className="font-xs flex justify-between pt-7 lg:text-sm text-xs">
                 <span className="text-white">
                   a partir de <strong>R${props.price}</strong>
@@ -31,7 +32,7 @@ export const Card  = (props:Idata) => {
                 {props.value > 0 ? <FaArrowUp className="mr-1"/>: <FaArrowDown className="mr-1"/>  } {props.currency} {props.value} ({props.percentage_change}%)
                 </span>
               </div>
-            </a>
+              </Link>
           </li>
         );
 

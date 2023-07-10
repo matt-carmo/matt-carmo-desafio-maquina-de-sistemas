@@ -1,26 +1,31 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import { Login } from "./Pages/Login/Login";
 import App from "./App";
+import ApexChart from "./Pages/Chart/Chart";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Login/>,
+    element: <Login />,
   },
   {
-    path:'home',
-    element:<App/>
-  }
+    path: "register",
+  },
+  {
+    path: "home",
+    element: <App />,
+  },
+  {
+    path: "chart/:name/:price/:percentage_change/:ticker/:currency/:value",
+    element: <ApexChart />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>
+  // </React.StrictMode>
 );

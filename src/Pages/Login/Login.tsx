@@ -1,13 +1,21 @@
 import { Link } from "react-router-dom";
 import { Header } from "../../components/Header/Header";
+import { useState } from "react";
 // import { Navigate } from "react-router-dom";
 
 export const Login = () => {
   
+  const [heightScreen] = useState(window.innerHeight)
+
+  const [HeaderHeight] = useState(window.document.querySelector('header')?.clientHeight)
+  
+  const [mainHeight] = useState( HeaderHeight)
+
+  // console.log(HeaderHeight)
   return (
     <>
       <Header />
-      <main className="overflow-hidden flex justify-center">
+      <main className="overflow-hidden flex justify-center" >
         <section
           id="login"
           className="bg-secondary flex flex-col items-center text-white px-2 lg:px-36 py-10 rounded-xl m-3 lg:mx-0 w-full lg:w-4/12"
