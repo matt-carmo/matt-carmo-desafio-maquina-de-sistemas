@@ -12,7 +12,7 @@ interface iData {
 }
 
 const ApexChart = () => {
-  const [media, setMedia] = useState(() => {
+  const [media] = useState(() => {
     if (window.innerWidth > 1536) {
       return 500;
     } else if (window.innerWidth > 1280) {

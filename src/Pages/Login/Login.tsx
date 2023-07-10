@@ -5,11 +5,11 @@ import { useState } from "react";
 
 export const Login = () => {
   
-  const [heightScreen] = useState(window.innerHeight)
+  // const [heightScreen] = useState(window.innerHeight)
 
-  const [HeaderHeight] = useState(window.document.querySelector('header')?.clientHeight)
+  // const [HeaderHeight] = useState(window.document.querySelector('header')?.clientHeight)
   
-  const [mainHeight] = useState( HeaderHeight)
+  // const [mainHeight] = useState( HeaderHeight)
 
   // console.log(HeaderHeight)
   return (
