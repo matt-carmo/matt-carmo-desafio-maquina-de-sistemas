@@ -51,7 +51,7 @@ export const Login = () => {
               placeholder="insira a senha"
               className="bg-transparent border-2 border-terciary rounded-md py-1 px-2"
             />
-          <span className="text-underline mr-auto underline cursor-pointer hover:text-zinc-400 delay-100">Esqueci a senha</span>
+          <span className="text-underline mr-auto mt-1 underline cursor-pointer hover:text-zinc-400 delay-100">Esqueci a senha</span>
 
           </div>
           <Link
