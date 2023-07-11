@@ -23,16 +23,12 @@ const ApexChart = () => {
       return 350;
     } else if (window.innerWidth > 640) {
       return 200;
-    }
-    else{
+    } else {
       return 200;
     }
   });
- 
- 
-   
-    // return media
-  
+
+  // return media
 
   const params = useParams();
   const [name] = useState<any>(params.name);
@@ -65,7 +61,7 @@ const ApexChart = () => {
     setOneminute([]);
     setTime(time);
   };
-  
+
   // console.log(series)
   useEffect(() => {
     for (let i = 0; i < 60; i++) {
@@ -145,19 +141,26 @@ const ApexChart = () => {
             ({ticker})
           </span>
         </div>
-        <span
+
+        <div
           className={`${
             value > 0 ? `text-green-600 ` : `text-red-600 `
-          } font-medium flex items-center`}
+          } font-medium flex items-center justify-between md:justify-start`}
         >
-          {value > 0 ? (
-            <FaArrowUp className="mr-1" />
-          ) : (
-            <FaArrowDown className="mr-1" />
-          )}{" "}
-          {currency} {value} ({percentage_change}%)
-        </span>
-        <div className="mb-1 mt-3 rounded-lg  flex justify-between md:justify-start left-40 ">
+          <span className="text-white mr-3">
+            a partir de <strong>R${price}</strong>
+          </span>
+
+          <span className="flex items-center">
+            {value > 0 ? (
+              <FaArrowUp className="mr-1" />
+            ) : (
+              <FaArrowDown className="mr-1" />
+            )}{" "}
+            {currency} {value} ({percentage_change}%)
+          </span>
+        </div>
+        <div className="mb-1 mt-3 rounded-lg  flex justify-between sm:justify-start left-40 ">
           <button
             className={`border ${
               oldTimeName === "M-1" ? "bg-white text-mainColor" : "text-white"
