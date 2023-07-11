@@ -35,10 +35,10 @@ export const Login = () => {
               type="text"
               id="user"
               placeholder=" insira o nome do usuário"
-              className="bg-transparent border-2 border-terciary rounded-md"
+              className="bg-transparent border-2 border-terciary rounded-md py-1 px-2 py-1"
             />
           </div>
-          <div>
+          <div className="flex flex-col">
             <label
               className="block text-white text-xl font-medium"
               htmlFor="email"
@@ -48,11 +48,12 @@ export const Login = () => {
             <input
               type="password"
               id="email"
-              placeholder=" insira a senha"
-              className="bg-transparent border-2 border-terciary rounded-md"
+              placeholder="insira a senha"
+              className="bg-transparent border-2 border-terciary rounded-md py-1 px-2"
             />
-          </div>
+          <span className="text-underline mr-auto underline cursor-pointer hover:text-zinc-400 delay-100">Esqueci a senha</span>
 
+          </div>
           <Link
             to={"/home"}
             className="p-2 bg-white mt-16 text-secondary text-center text-2xl font-bold rounded-3xl w-60"
@@ -60,7 +61,7 @@ export const Login = () => {
             Login
           </Link>
 
-          <p className="my-2">Ainda não tem uma conta?</p>
+          <p className="my-3">Ainda não tem uma conta?</p>
           <Link 
             to={'/sign-in'}
             

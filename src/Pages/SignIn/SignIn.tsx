@@ -21,8 +21,8 @@ export const SignIn = () => {
           <input
             type="text"
             id="user"
-            placeholder=" insira o nome do usuário"
-            className="bg-transparent border-2 border-terciary rounded-md"
+            placeholder="Insira o nome do usuário"
+            className="bg-transparent border-2 border-terciary rounded-md py-1 px-2"
           />
         </div>
         <div className="mb-1">
@@ -32,8 +32,8 @@ export const SignIn = () => {
           <input
             type="text"
             id="user"
-            placeholder=" insira o nome do usuário"
-            className="bg-transparent border-2 border-terciary rounded-md"
+            placeholder="insira número do usuário"
+            className="bg-transparent border-2 border-terciary rounded-md py-1 px-2"
           />
         </div>
         <div className="mb-1">
@@ -43,8 +43,8 @@ export const SignIn = () => {
           <input
             type="text"
             id="user"
-            placeholder=" insira o nome do usuário"
-            className="bg-transparent border-2 border-terciary rounded-md"
+            placeholder=" insira o email do usuário"
+            className="bg-transparent border-2 border-terciary rounded-md py-1 px-2"
           />
         </div>
         <div>
@@ -55,7 +55,7 @@ export const SignIn = () => {
             type="password"
             id="email"
             placeholder=" insira a senha"
-            className="bg-transparent border-2 border-terciary rounded-md"
+            className="bg-transparent border-2 border-terciary rounded-md py-1 px-2"
           />
         </div>
 
@@ -65,7 +65,7 @@ export const SignIn = () => {
         >
           Criar Conta
         </Link>
-        <p className="my-2">Já possui conta?</p>
+        <p className="my-3">Já possui conta?</p>
         <Link
           to={'/'}
           className="p-2 bg-transparent text-center text-white border-2 text-2xl font-bold rounded-3xl w-60"
