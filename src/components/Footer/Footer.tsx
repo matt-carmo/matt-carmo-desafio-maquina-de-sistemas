@@ -2,7 +2,7 @@ import { FaGithubAlt, FaLink } from "react-icons/fa6";
 
 export const Footer = () => {
   return (
-    <footer className="fixed bottom-1 w-full bg-zinc-200 text-black text-center flex justify-center">
+    <footer className="fixed bottom-0 w-full bg-zinc-200 text-black text-center flex justify-center">
       <a
         href="https://github.com/matt-carmo/matt-carmo-desafio-maquina-de-sistemas"
         className="text-secondary mr-1 text-medium flex items-center"
