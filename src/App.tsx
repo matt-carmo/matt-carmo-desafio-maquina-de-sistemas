@@ -12,7 +12,7 @@ interface Idata {
   price: string;
   currency: string;
   value: number;
-  percentage_change: number;
+  percentage_change: number ;
   active: boolean;
 }
 export default function App() {

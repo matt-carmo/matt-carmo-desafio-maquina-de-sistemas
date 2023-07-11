@@ -73,7 +73,7 @@ export const SignIn = () => {
           Entrar
           </Link>
       </section>
-    </main>
+    </main> 
       </>
   );
 };

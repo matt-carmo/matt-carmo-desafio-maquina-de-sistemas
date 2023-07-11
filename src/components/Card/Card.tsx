@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { FaArrowDown, FaArrowUp } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
@@ -11,8 +12,14 @@ interface Idata {
     active: boolean,
     icon:JSX.Element
   }
+
+const parseToString = (value:number) => {
+  return value.toString().replace('.', ',')
+}
 export const Card  = (props:Idata) => {
 
+        const [percentage_change] = useState(parseToString(props.percentage_change))
+        const [value] = useState(parseToString(props.value))
 
         return (
           <li className="border border-terciary rounded-xl px-2 cursor-">
@@ -23,7 +30,7 @@ export const Card  = (props:Idata) => {
               <div className="title-card text-2xl font-medium">{props.name}</div>
               <span className="text-zinc-400 font-bold">{props.ticker}</span>
             </div>
-              <Link to={`/chart/${props.name}/${props.price.replace('.', ',')}/${props.percentage_change}/${props.ticker}/${props.currency}/${props.value}`}>
+              <Link to={`/chart/${props.name}/${props.price.replace('.', ',')}/${percentage_change}/${props.ticker}/${props.currency}/${value}`}>
               <div className="font-xs flex justify-between pt-7 lg:text-sm text-xs">
                 <span className="text-white">
                   a partir de <strong>R${props.price}</strong>
