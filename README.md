@@ -19,7 +19,7 @@ Instale meu projeto usando npm!
 
 ```bash
   git clone https://github.com/matt-carmo/matt-carmo-desafio-maquina-de-sistemas
-  cd desafio-maquina-sistemas-react
+  cd matt-carmo-desafio-maquina-de-sistemas
   npm install
   npm run dev
 ```
